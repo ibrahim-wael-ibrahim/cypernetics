@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/app/api/auth/logout/route.js", "src/app/api/auth/me/route.js", "src/app/api/auth/register/route.js", "src/app/api/cart/route.js", "src/app/api/cart/items/[id]/route.js", "src/app/api/orders/route.js", "src/app/api/orders/[id]/route.js", "src/app/api/products/route.js", "src/app/api/products/[id]/route.js", "prisma/seed.js", "src/app/login/page.jsx", "src/app/reset-password/page.jsx", "src/app/register/page.jsx", "src/app/admin/layout.jsx", "src/app/admin/products/page.jsx", "src/app/admin/orders/page.jsx", "src/app/checkout/page.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
