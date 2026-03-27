@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import { useMemo } from 'react';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = useMemo(() => new Date().getFullYear(), []);
 
   return (
     <footer className="border-t bg-background">
