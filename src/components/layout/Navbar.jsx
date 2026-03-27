@@ -12,7 +12,6 @@ import { fetchApiCart, syncLocalItemsToApi } from "@/lib/cart-client";
 import { toast } from "sonner";
 
 export default function Navbar() {
-  const [hasMounted, setHasMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const hasSyncedOnLoginRef = useRef(false);
@@ -28,14 +27,10 @@ export default function Navbar() {
   const { data: apiCartData } = useQuery({
     queryKey: ['navbar-api-cart'],
     queryFn: fetchApiCart,
-    enabled: hasMounted && hasAuthHydrated && isAuthenticated,
+    enabled: hasAuthHydrated && isAuthenticated,
   });
 
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-
-  const canRenderAuthUI = hasMounted && hasAuthHydrated;
+  const canRenderAuthUI = hasAuthHydrated;
 
   const itemCount = canRenderAuthUI && isAuthenticated
     ? (apiCartData?.itemCount || 0)
@@ -87,7 +82,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-40 w-full border-b border-primary bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <nav className="sticky top-0 z-40 w-full border-b border-primary bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
@@ -123,7 +118,7 @@ export default function Navbar() {
                 className="relative"
               >
                 <ShoppingCart className="h-5 w-5" />
-                {hasMounted && hasHydrated && itemCount > 0 && (
+                {hasHydrated && itemCount > 0 && (
                   <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
                     {itemCount}
                   </span>
@@ -168,7 +163,7 @@ export default function Navbar() {
                 className="relative"
               >
                 <ShoppingCart className="h-5 w-5" />
-                {hasMounted && hasHydrated && itemCount > 0 && (
+                {hasHydrated && itemCount > 0 && (
                   <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center">
                     {itemCount}
                   </span>

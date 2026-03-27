@@ -26,7 +26,7 @@ export const metadata = {
   ],
   authors: [{ name: "Cybernetic Team" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "./icon.svg",
   },
   openGraph: {
     title: "Cybernetic - Advanced Robotics Solutions",
