@@ -70,7 +70,7 @@ async function fetchProducts() {
 export default function Home() {
   const { data, isLoading, error } = useQuery({ queryKey: ['products', 'featured'], queryFn: fetchProducts });
   const products = data?.data || [];
-console.log('Fetched products:', products);
+// console.log('Fetched products:', products);
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

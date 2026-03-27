@@ -1,13 +1,12 @@
 import 'dotenv/config';
 import bcrypt from 'bcrypt';
-import prismaPkg from '@prisma/client';
-import sqliteAdapterPkg from '@prisma/adapter-better-sqlite3';
+// import { PrismaClient } from './generated/client';
+import { PrismaClient } from './generated/client.js';
+import { PrismaBetterSqlite3 } from '@prisma/adapter-better-sqlite3';
 
-const { PrismaClient } = prismaPkg;
-const { PrismaBetterSqlite3 } = sqliteAdapterPkg;
 
 const adapter = new PrismaBetterSqlite3({
-  url: process.env.DATABASE_URL || 'file:./db/database.db',
+  url: process.env.DATABASE_URL || 'file:./prisma/db/database.db',
 });
 
 const prisma = new PrismaClient({ adapter });

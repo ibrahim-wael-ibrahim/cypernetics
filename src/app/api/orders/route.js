@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { verifyAuth, unauthorizedResponse } from '@/lib/middleware';
-import { Prisma } from '@prisma/client';
+import { Prisma } from '../../../../prisma/generated/client.js';
 
 // GET /api/orders - Get current user's orders
 export async function GET(request) {

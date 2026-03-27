@@ -52,7 +52,7 @@ npm install
 Create `.env` in the project root:
 
 ```env
-DATABASE_URL="file:./db/database.db"
+DATABASE_URL="file:./prisma/db/database.db"
 JWT_SECRET="replace-with-a-strong-secret"
 ```
 
@@ -113,7 +113,7 @@ Set these in Project Settings → Environment Variables:
 For SQLite demo usage, you can set:
 
 ```env
-DATABASE_URL="file:./db/database.db"
+DATABASE_URL="file:./prisma/db/database.db"
 ```
 
 But for persistent production data, use an external DB URL.
