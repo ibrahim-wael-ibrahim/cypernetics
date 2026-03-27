@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { CheckCircle2 } from 'lucide-react';
@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 
 const REDIRECT_SECONDS = 5;
 
-export default function ThanksClient() {
+function ThanksContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [secondsLeft, setSecondsLeft] = useState(REDIRECT_SECONDS);
@@ -71,5 +71,13 @@ export default function ThanksClient() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function ThanksPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-muted/30" />}>
+      <ThanksContent />
+    </Suspense>
   );
 }
