@@ -201,13 +201,13 @@ export default function Navbar() {
                 >
                   Products
                 </Link>
-                <Link
+                {/* <Link
                   href="/categories"
                   className="text-sm font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Categories
-                </Link>
+                </Link> */}
                 <div className="flex flex-col gap-2 pt-4 border-t">
                   {!canRenderAuthUI ? (
                     <div className="w-full" />
