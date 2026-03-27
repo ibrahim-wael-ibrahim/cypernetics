@@ -31,11 +31,11 @@ export default function Footer() {
                   Products
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/categories" className="text-sm text-muted-foreground hover:text-cyan-600 transition-colors">
                   Categories
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -58,11 +58,11 @@ export default function Footer() {
                   My Account
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/orders" className="text-sm text-muted-foreground hover:text-cyan-600 transition-colors">
                   Order History
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -70,7 +70,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-sm font-semibold">Support</h4>
             <ul className="space-y-2">
-              <li>
+              {/* <li>
                 <Link href="/contact" className="text-sm text-muted-foreground hover:text-cyan-600 transition-colors">
                   Contact Us
                 </Link>
@@ -79,17 +79,17 @@ export default function Footer() {
                 <Link href="/faq" className="text-sm text-muted-foreground hover:text-cyan-600 transition-colors">
                   FAQ
                 </Link>
-              </li>
+              </li> */}
               <li>
-                <Link href="/shipping" className="text-sm text-muted-foreground hover:text-cyan-600 transition-colors">
+                <Link href="/account" className="text-sm text-muted-foreground hover:text-cyan-600 transition-colors">
                   Shipping Info
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/returns" className="text-sm text-muted-foreground hover:text-cyan-600 transition-colors">
                   Returns
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -101,10 +101,10 @@ export default function Footer() {
               &copy; {currentYear} Cybernetic. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <Link href="/privacy" className="text-sm text-muted-foreground hover:text-cyan-600 transition-colors">
+              <Link href="/#" className="text-sm text-muted-foreground hover:text-cyan-600 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-sm text-muted-foreground hover:text-cyan-600 transition-colors">
+              <Link href="/#" className="text-sm text-muted-foreground hover:text-cyan-600 transition-colors">
                 Terms of Service
               </Link>
             </div>
